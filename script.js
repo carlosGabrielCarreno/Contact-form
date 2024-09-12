@@ -1,23 +1,50 @@
-document.getElementById('contact-form').addEventListener('submit',function(){
-    alert('enviado')
-} )
+// document.addEventListener('DOMContentLoaded', () => {
+//     document.getElementById('contact-form').addEventListener('submit', function(event) {
+//         event.preventDefault(); // prevent form submission
+//         console.log('estoy');
+        
+//         // get element from input
+//         const firstName = document.getElementById('first-name');
+//         const lastName = document.getElementById('last-name');
+//         const email = document.getElementById('email-address');
+        
+//         // call the validation function for each field.
+//         validateField(firstName, 'first-name-error');
+//         validateField(lastName, 'last-name-error');
+//         validateField(email, 'email-error');
+//     });
+// });
 
-// document.getElementById('contact-form').addEventListener('submit', function(event){
-//     event.preventDefault() // prevent form submission
-//     console.log('estoy');
+// function validateField(field, errorId) {
+//     const errorElement = document.getElementById(errorId);
     
-//     // get element from input
-//     const firstName = document.getElementById('first-name')
-//     const lastName = document.getElementById('last-name')
-//     const email = document.getElementById('email-address')
+//     // validar si el campo esta vacio o no cumple con la validacion nativa de HTML
+//     if (!field.checkValidity()) {
+//         field.classList.add('error'); // añadir clase de error al campo
+//         errorElement.style.display = 'block'; // mostrar mensaje de error
+//     } else {
+//         field.classList.remove('error'); // remover clase de error
+//         errorElement.style.display = 'none'; // ocultar mensaje de error
+//     }
+// }
+
+
+document.getElementById('contact-form').addEventListener('submit', function(event){
+    event.preventDefault() // prevent form submission
+    console.log('estoy');
+    
+    // get element from input
+    const firstName = document.getElementById('first-name')
+    const lastName = document.getElementById('last-name')
+    const email = document.getElementById('email-address')
     
 
-//     // call the validation function for each field.
-//     validateField(firstName, 'first-name-error')
-//     validateField(lastName, 'last-name-error')
-//     validateField(email, 'email-error')
+    // call the validation function for each field.
+    validateField(firstName, 'first-name-error')
+    validateField(lastName, 'last-name-error')
+    validateField(email, 'email-error')
 
-// })
+})
 
 function validateField(field, errorId){
     const errorElement = document.getElementById(errorId)

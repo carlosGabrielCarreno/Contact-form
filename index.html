@@ -4,16 +4,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
   <!-- displays site properly based on user's device -->
   <link rel="stylesheet" href="./styles.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <script defer src="./script.js"></script>
   <title>Frontend Mentor | Contact form</title>
 
 </head>
 
 <body>
-  <form id="contact-form" action="/submit" method="post" class="contact-form">
+  <form id="contact-form" action="/submit"  class="contact-form-main" novalidate>
     <h1 class="form-title">Contact Us</h1>
 
     <label for="first-name" class="form-label">First Name</label>
@@ -31,10 +34,12 @@
 
     <h3>Query Type</h3>
     <label>
-      <input id="query-general" type="radio" name="query-type" value="General Enquiry" required>
+      <input id="query-general" type="radio" name="query-type" value="General Enquiry"  required>
+      <span>General Enquiry</span>
     </label>
     <label>
       <input id="query-support" type="radio" name="query-type" value="Support Request" required>
+      <span>Support Request</span>
     </label>
     <span class="error-message" id="query-type-error">Please select a query type</span>
 
@@ -56,6 +61,8 @@
       Message Sent!
       Thanks for completing the form. We'll be in touch soon!
     -->
+  <script defer src="script.js"></script>
+
 </body>
 
 

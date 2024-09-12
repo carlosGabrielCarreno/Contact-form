@@ -22,13 +22,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: "Karla", sans-serif;
+}
+.form-title {
+    font-weight: 700;
 }
 
-.contact-form {
+.contact-form-main {
     background-color: var(--White);
     padding: 1rem;
     width: 80%;
-    height: 80%;
+    height: 90%;
     /* border:  solid red; */
     display: flex;
     flex-direction: column;
@@ -47,17 +51,25 @@ body {
     border-color: var(--Red);
 }
 
+/* inputs */
+.form-input {
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid var(--Grey-500-medium);
+}
+
 /* btn submit */
 .form-button {
     display: block;
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     border: none;
     border-radius: 4px;
     background-color: var(--Green-600-medium);
     color: var(--White);
     font-size: 16px;
     cursor: pointer;
+    font-weight: 700;
 }
 
 .form-button:hover {
