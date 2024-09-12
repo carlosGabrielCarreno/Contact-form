@@ -7,13 +7,13 @@
   <!-- displays site properly based on user's device -->
   <link rel="stylesheet" href="./styles.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-
+  <script defer src="./script.js"></script>
   <title>Frontend Mentor | Contact form</title>
 
 </head>
 
 <body>
-  <form action="/submit" method="post" class="contact-form">
+  <form id="contact-form" action="/submit" method="post" class="contact-form">
     <h1 class="form-title">Contact Us</h1>
 
     <label for="first-name" class="form-label">First Name</label>
@@ -31,33 +31,28 @@
 
     <h3>Query Type</h3>
     <label>
-      <input type="radio" name="query-type" value="General Enquiry" required>
+      <input id="query-general" type="radio" name="query-type" value="General Enquiry" required>
     </label>
     <label>
-      <input type="radio" name="query-type" value="Support Request" required>
+      <input id="query-support" type="radio" name="query-type" value="Support Request" required>
     </label>
+    <span class="error-message" id="query-type-error">Please select a query type</span>
 
     <label for="message">Message</label>
-    <textarea id="message" name="message" rows="4" required>
+    <textarea id="message" name="message" rows="4" class="form-input" required>
     </textarea>
+    <span class="error-message" id="message-error">This field is required</span>
 
     <label for="terms">
-      <input type="checkbox" name="terms" id="terms">
+      <input type="checkbox" name="terms" id="terms" required>
       I consent to being contacted by the team
     </label>
+    <span class="error-message" id="terms-error">To submit this form, please consent to being contacted</span>
 
     <button class="form-button" type="submit">Submit</button>
   </form>
 
   <!--
-    
-    Please select a query type
-    
-    This field is required
-
-    
-    To submit this form, please consent to being contacted
-  
       Message Sent!
       Thanks for completing the form. We'll be in touch soon!
     -->
