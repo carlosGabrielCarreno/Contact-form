@@ -24,6 +24,7 @@ body {
     align-items: center;
     font-family: "Karla", sans-serif;
 }
+
 .form-title {
     font-weight: 700;
 }
@@ -50,6 +51,7 @@ body {
 .form-input.error {
     border-color: var(--Red);
 }
+
 
 /* inputs */
 .form-input {
