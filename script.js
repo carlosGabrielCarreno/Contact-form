@@ -9,12 +9,14 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     const email = document.getElementById('email-address')
     const generalEnquiry = document.getElementById('query-general')
     const supportRequest = document.getElementById('query-support')
-
+    const message = document.getElementById('message')
 
     // call the validation function for each field.
     validateField(firstName, 'first-name-error')
     validateField(lastName, 'last-name-error')
     validateField(email, 'email-error')
+
+    validateFieldTextArea(message, 'message-error')
     
     validateFieldCheckBox(generalEnquiry, supportRequest, 'query-type-error')
 
@@ -41,4 +43,18 @@ function validateFieldCheckBox(fieldOne, fieldTwo, errorId){
     } else {
         errorElement.style.display = 'block'   
     }
+}
+
+function validateFieldTextArea(field, errorId){
+    const errorElement = document.getElementById(errorId)
+    
+    if(field.value == ''){
+        console.log('' == field.value);
+        errorElement.style.display = 'block'   
+        field.classList.add('error') // aniadir clase de error al campo
+    } else {
+        field.classList.remove('error') // remover clase de error
+        errorElement.style.display = 'none'
+    }
+    
 }

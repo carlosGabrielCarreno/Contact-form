@@ -19,20 +19,20 @@
   <form id="contact-form" action="/submit"  class="contact-form-main" novalidate>
     <h1 class="form-title">Contact Us</h1>
 
-    <label for="first-name" class="form-label">First Name</label>
+    <label for="first-name" class="form-label">First Name <span class="asterisk">*</span></label>
     <input type="text" id="first-name" name="first-name" class="form-input" required>
     <span class="error-message" id="first-name-error">This field is required</span>
 
-    <label for="last-name" class="form-label">Last Name</label>
+    <label for="last-name" class="form-label">Last Name <span class="asterisk">*</span></label>
     <input type="text" id="last-name" name="last-name" class="form-input" required>
     <span class="error-message" id="last-name-error">This field is required</span>
 
-    <label for="email-address" class="form-label">Email Address</label>
+    <label for="email-address" class="form-label">Email Address <span class="asterisk">*</span></label>
     <input type="email" id="email-address" name="email-address" class="form-input" required>
     <span class="error-message" id="email-error">Please enter a valid email address
       This field is required</span>
 
-    <h3>Query Type</h3>
+    <h3>Query Type <span class="asterisk">*</span></h3>
     <label>
       <input id="query-general" type="radio" name="query-type" value="General Enquiry" required>
       <span>General Enquiry</span>
@@ -43,14 +43,13 @@
     </label>
     <span class="error-message" id="query-type-error">Please select a query type</span>
 
-    <label for="message">Message</label>
-    <textarea id="message" name="message" rows="4" class="form-input" required>
-    </textarea>
+    <label for="message">Message <span class="asterisk">*</span></label>
+    <textarea id="message" name="message" rows="4" class="form-input" required></textarea>
     <span class="error-message" id="message-error">This field is required</span>
 
     <label for="terms">
       <input type="checkbox" name="terms" id="terms" required>
-      I consent to being contacted by the team
+      I consent to being contacted by the team <span class="asterisk">*</span>
     </label>
     <span class="error-message" id="terms-error">To submit this form, please consent to being contacted</span>
 

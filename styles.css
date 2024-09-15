@@ -29,6 +29,10 @@ body {
     font-weight: 700;
 }
 
+.asterisk {
+    color: var(--Green-600-medium);
+}
+
 .contact-form-main {
     background-color: var(--White);
     padding: 1rem;
