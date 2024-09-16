@@ -53,8 +53,10 @@ body {
 }
 
 .form-input.error {
-    border-color: var(--Red);
+    border: 1px solid var(--Red);
 }
+
+
 
 
 /* inputs */
@@ -62,6 +64,26 @@ body {
     padding: 15px;
     border-radius: 4px;
     border: 1px solid var(--Grey-500-medium);
+    cursor: pointer;
+}
+
+.form-input:focus {
+    outline: none;
+    border: 1px solid var(--Green-600-medium);
+}
+
+/* query type */
+.container-query-type {
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid var(--Grey-500-medium);
+    display: flex;
+    gap: .5rem;
+}
+
+
+#message {
+    cursor: text;
 }
 
 /* btn submit */
