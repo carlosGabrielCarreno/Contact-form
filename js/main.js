@@ -1,7 +1,7 @@
+import { validateFieldTextArea } from './validateFieldTextArea.js';
 
 document.getElementById('contact-form').addEventListener('submit', function(event){
     event.preventDefault() // prevent form submission
-    console.log('estoy');
     
     // get element from input
     const firstName = document.getElementById('first-name')
@@ -45,18 +45,4 @@ function validateFieldCheckBox(fieldOne, fieldTwo, errorId){
     } else {
         errorElement.style.display = 'block'   
     }
-}
-
-function validateFieldTextArea(field, errorId){
-    const errorElement = document.getElementById(errorId)
-    
-    if(field.value == ''){
-        console.log('' == field.value);
-        errorElement.style.display = 'block'   
-        field.classList.add('error') // aniadir clase de error al campo
-    } else {
-        field.classList.remove('error') // remover clase de error
-        errorElement.style.display = 'none'
-    }
-    
 }
