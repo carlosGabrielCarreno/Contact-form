@@ -1,70 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Contact form</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- google fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
-  <!-- displays site properly based on user's device -->
-  <link rel="stylesheet" href="./styles.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <title>Frontend Mentor | Contact form</title>
+  <body>
+    <form
+      id="contact-form"
+      action="/submit"
+      class="contact-form-main"
+      novalidate
+    >
+      <h1 class="form-title">Contact Us</h1>
 
-</head>
+      <label for="first-name" class="form-label"
+        >First Name <span class="asterisk">*</span></label
+      >
+      <input
+        type="text"
+        id="first-name"
+        name="first-name"
+        class="form-input"
+        required
+      />
+      <span class="error-message" id="first-name-error"
+        >This field is required</span
+      >
 
-<body>
-  <form id="contact-form" action="/submit"  class="contact-form-main" novalidate>
-    <h1 class="form-title">Contact Us</h1>
+      <label for="last-name" class="form-label"
+        >Last Name <span class="asterisk">*</span></label
+      >
+      <input
+        type="text"
+        id="last-name"
+        name="last-name"
+        class="form-input"
+        required
+      />
+      <span class="error-message" id="last-name-error"
+        >This field is required</span
+      >
 
-    <label for="first-name" class="form-label">First Name <span class="asterisk">*</span></label>
-    <input type="text" id="first-name" name="first-name" class="form-input" required>
-    <span class="error-message" id="first-name-error">This field is required</span>
+      <label for="email-address" class="form-label"
+        >Email Address <span class="asterisk">*</span></label
+      >
+      <input
+        type="email"
+        id="email-address"
+        name="email-address"
+        class="form-input"
+        required
+      />
+      <span class="error-message" id="email-error"
+        >Please enter a valid email address This field is required</span
+      >
 
-    <label for="last-name" class="form-label">Last Name <span class="asterisk">*</span></label>
-    <input type="text" id="last-name" name="last-name" class="form-input" required>
-    <span class="error-message" id="last-name-error">This field is required</span>
+      <h3>Query Type <span class="asterisk">*</span></h3>
+      <label class="container-query-type">
+        <input
+          id="query-general"
+          type="radio"
+          name="query-type"
+          value="General Enquiry"
+          required
+        />
+        <span>General Enquiry</span>
+      </label>
+      <label class="container-query-type">
+        <input
+          id="query-support"
+          type="radio"
+          name="query-type"
+          value="Support Request"
+          required
+        />
+        <span>Support Request</span>
+      </label>
+      <span class="error-message" id="query-type-error"
+        >Please select a query type</span
+      >
 
-    <label for="email-address" class="form-label">Email Address <span class="asterisk">*</span></label>
-    <input type="email" id="email-address" name="email-address" class="form-input" required>
-    <span class="error-message" id="email-error">Please enter a valid email address
-      This field is required</span>
+      <label for="message">Message <span class="asterisk">*</span></label>
+      <textarea
+        id="message"
+        name="message"
+        rows="4"
+        class="form-input"
+        required
+      ></textarea>
+      <span class="error-message" id="message-error"
+        >This field is required</span
+      >
 
-    <h3>Query Type <span class="asterisk">*</span></h3>
-    <label class="container-query-type">
-      <input id="query-general" type="radio" name="query-type" value="General Enquiry" required>
-      <span>General Enquiry</span>
-    </label>
-    <label class="container-query-type">
-      <input id="query-support" type="radio" name="query-type" value="Support Request" required>
-      <span>Support Request</span>
-    </label>
-    <span class="error-message" id="query-type-error">Please select a query type</span>
+      <label for="terms">
+        <input type="checkbox" name="terms" id="terms" required />
+        I consent to being contacted by the team <span class="asterisk">*</span>
+      </label>
+      <span class="error-message" id="terms-error"
+        >To submit this form, please consent to being contacted</span
+      >
 
-    <label for="message">Message <span class="asterisk">*</span></label>
-    <textarea id="message" name="message" rows="4" class="form-input" required></textarea>
-    <span class="error-message" id="message-error">This field is required</span>
+      <button class="form-button" type="submit">Submit</button>
+    </form>
 
-    <label for="terms">
-      <input type="checkbox" name="terms" id="terms" required>
-      I consent to being contacted by the team <span class="asterisk">*</span>
-    </label>
-    <span class="error-message" id="terms-error">To submit this form, please consent to being contacted</span>
-
-    <button class="form-button" type="submit">Submit</button>
-  </form>
-
-  <!--
+    <!--
       Message Sent!
       Thanks for completing the form. We'll be in touch soon!
     -->
-  <script type="module" defer src="./js/main.js"></script>
-  <script type="module" defer src="./js/validateFieldTextArea.js"></script>
-  
-
-</body>
-
-
+    <script type="module" defer src="./js/main.js"></script>
+    <script type="module" defer src="./js/validateFieldTextArea.js"></script>
+    <script type="module" defer src="./js/validateField.js"></script>
+  </body>
 </html>
