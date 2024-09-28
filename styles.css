@@ -47,12 +47,30 @@ body {
   justify-content: space-between;
 }
 
+.container-name-data {
+  display: flex;
+  flex-direction: column;
+}
+
 /* message error */
 .error-message {
   display: none;
   color: var(--Red);
   font-size: 12px;
   margin-top: 4px;
+}
+
+.container-name-data {
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.container-first-name,
+.container-last-name {
+  border: solid blueviolet;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .form-input.error {
@@ -104,8 +122,20 @@ body {
 }
 
 /* Form Main */
-@media (min-width: 400px) {
+
+@media (min-width: 900px) {
   .contact-form-main {
-    width: 400px;
+    width: 800px;
+  }
+  .container-name-data {
+    flex-direction: row;
+    /* border: solid blueviolet; */
+    gap: 0.8rem;
+  }
+  .container-first-name,
+  .container-last-name {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
   }
 }
